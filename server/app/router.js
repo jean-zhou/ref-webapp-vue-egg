@@ -7,30 +7,7 @@
  */
 module.exports = app => {
   const { router, controller, io } = app;
-  const { weapp, user, utils, goodsOrder, goods, goodsCategory, freightPlan, deliveryTimeType, statistics, notice } = controller;
-
-  /**
-   * 微信小程序
-   */
-  router.get('/weapp/getGoodsWithCategory', weapp.getGoodsWithCategory);
-  router.get('/weapp/getDefaultFreightPlan', weapp.getDefaultFreightPlan);
-  router.get('/weapp/getDeliveryTimeTypeList', weapp.getDeliveryTimeTypeList);
-  router.post('/weapp/queryOrderBill', weapp.queryOrderBill);
-  router.post('/weapp/getOrderBill', weapp.getOrderBill);
-  router.post('/weapp/createBill', weapp.createBill);
-  router.post('/weapp/cancelBill', weapp.cancelBill);
-  router.post('/weapp/auditBill', weapp.auditBill);
-  router.post('/weapp/completeBill', weapp.completeBill);
-  router.get('/weapp/getAddress', weapp.getAddress);
-  router.get('/weapp/getDefaultAddress', weapp.getDefaultAddress);
-  router.post('/weapp/setDefaultAddress', weapp.setDefaultAddress);
-  router.post('/weapp/deleteAddress', weapp.deleteAddress);
-  router.get('/weapp/getAddressList', weapp.getAddressList);
-  router.post('/weapp/saveNewAddress', weapp.saveNewAddress);
-  router.post('/weapp/saveModifyAddress', weapp.saveModifyAddress);
-  router.get('/weapp/getMerchant', weapp.getMerchant);
-  router.post('/weapp/login', weapp.login);
-
+  const { user, utils, goodsOrder, goods, goodsCategory, freightPlan, deliveryTimeType, statistics, notice } = controller;
   /**
    * 管理端
    */
